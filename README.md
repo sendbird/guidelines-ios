@@ -1,3 +1,20 @@
+- [How to Generate a Certificate for VoIP Push Notification](#how-to-generate-a-certificate-for-voip-push-notification)
+  * [Prerequisition](#prerequisition)
+  * [Steps](#steps)
+    + [Apple Developer Page](#apple-developer-page)
+    + [Certificates, Identifiers & Profiles](#certificates-identifiers-&-profiles)
+    + [Services Certificates](#services-certificates)
+    + [Identifiers](#identifiers)
+    + [Certificate Signing Request](#certificate-signing-request)
+    + [Download the Certificate](#download-the-certificate)
+    + [Keychain Access](#keychain-access)
+    + [Export Certificate & Private Key into Personal Information Exchange (p12)](#export-certificate-&-private-key-into-personal-information-exchange-(p12))
+    + [Save .p12](#save-p12)
+    + [Password for .p12](#password-for-p12)
+    + [Completed to Generate .p12](#completed-to-generate-p12)
+- [Appendix](#appendix)
+  * [How to Create CSR File](#how-to-create-csr-file)
+
 # How to Generate a Certificate for VoIP Push Notification
 
 ## Prerequisition
@@ -27,9 +44,9 @@ Click '`+`' button to add a new certificate
 
 Select your certificate type. There are two types of certificate that can be used for VoIP. The one is `Apple Push Notification service SSL (Sandbox & Production)` and the other is `VoIP Services Certificate`.  
 
- `Apple Push Notification service SSL (Sandbox & Production)` is used for two services,  **`VoIP Push Notification`** as well as **`Remote Push Notification`** (Actually it is also used for `ClockKit`, but we don't cover it now). And this certificate is used for `Sandbox` environment (we sometimes call it development, debug...) as well as `Production` environment (we sometimes call it distribution, release...). 
+ `Apple Push Notification service SSL (Sandbox & Production)` is used for two services, **`VoIP Push Notification`** as well as **`Remote Push Notification`** (Actually it is also used for `ClockKit`, but we don't cover it now). And this certificate is used for `Sandbox` environment (we sometimes call it development, debug...) as well as `Production` environment (we sometimes call it distribution, release...). 
 
-`VoIP Services Certificate` is used **ONLY** for **`VoIP Push Notification**`. And this certificate is also used for `Sandbox` environment` as well as `Production` environment.
+`VoIP Services Certificate` is used **ONLY** for **`VoIP Push Notification`**. And this certificate is also used for `Sandbox` environment` as well as `Production` environment.
 
 >  If you are not an `app manager` or `admin` you will be limited to the types of certificates you can generate. You may need the help of your Apple Developer account `admin` or `app manager`.
 
