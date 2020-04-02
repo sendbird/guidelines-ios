@@ -1,5 +1,5 @@
 # Table of Content
-- [How to Generate a Certificate for VoIP Push Notification](#how-to-generate-a-certificate-for-voip-push-notification)
+- [How to Generate a Certificate for iOS VoIP Push Notification](#how-to-generate-a-certificate-for-ios-voip-push-notification)
   * [Prerequisition](#prerequisition)
   * [Steps](#steps)
     + [Apple Developer Page](#apple-developer-page)
@@ -16,7 +16,7 @@
 - [Appendix](#appendix)
   * [How to Create CSR File](#how-to-create-csr-file)
 
-# How to Generate a Certificate for VoIP Push Notification
+# How to Generate a Certificate for iOS VoIP Push Notification
 
 ## Prerequisition
 
