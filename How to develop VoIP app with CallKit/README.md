@@ -330,8 +330,7 @@ When the provider performs `CXCallActions`, corresponding `CXProviderDelegate` m
 
 | method | Description & What to do in here? | Sendbird Calls method |
 | --- | --- | --- |
-| func provider(CXProvider, perform: CXStartCallAction) | You can get call object from `CXStartCallAction` object. Add its call ID to `callManger.callIDs`.
-For iPhone local call logs(Recents), you may call `provider.reportOutgoingCall(with:startedConnectingAt:)`. | If you want to handle `DirectCall` object, use `SendBirdCall.getCall(forUUID:)` |
+| func provider(CXProvider, perform: CXStartCallAction) | You can get call object from `CXStartCallAction` object. Add its call ID to `callManger.callIDs`. For iPhone local call logs(Recents), you may call `provider.reportOutgoingCall(with:startedConnectingAt:)`. | If you want to handle `DirectCall` object, use `SendBirdCall.getCall(forUUID:)` |
 | func provider(CXProvider, perform: CXAnswerCallAction) | This method called when the user tapped mute button on CallKit UI screen. Invoke accepting action in Sendbird Calls. | `DirectCall.accept(with:)` |
 | func provider(CXProvider, perform: CXEndCallAction) | This method called when the user tapped end button on CallKit UI screen. Invoke ending action in Sendbird Calls. | `DirectCall.end()` |
 | func provider(CXProvider, perform: CXSetMutedCallAction) | This method called when the user tapped mute button on CallKit UI screen. Invoke muting / unmuting action in Sendbird Calls | `DirectCall.muteMicrophone()` and `DirectCall.unmuteMicrophone()` | 
