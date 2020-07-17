@@ -1,3 +1,14 @@
+# Table of Content
+- [Make Local Calls with CallKit](#make-local-calls-with-callkit)
+    * [Section1: The basic configuration of CallKit](#section1-the-basic-configuration-of-callkit)
+    * [Section2: Design CallKit UI](#section2-design-callkit-ui)
+    * [Section3: Request CallKit action](#section3-request-callkit-action)
+    * [Section4: Manage Call](#section4-manage-call)
+    * [Section5: Handling CallKit Events](#section5-handling-callkit-event)
+    * [Section6: Handle CXCallAction event](#section6-handle-cxcallacton-event)
+    * [Section7: Interaction with UI](#section7-interaction-with-ui)
+
+
 # Make Local Calls with CallKit
 
 This page guides you through the process of developing VoIP apps by using Sendbird Calls framework and Apple’s CallKit framework. You’ll start by developing a simple project that allows you to make local calls using CallKit.
@@ -24,7 +35,11 @@ Go to Certificate, Identifiers & Profiles > Certificates > Create a New Certific
 
 Go to Target > Signing & Capabilities. Add Background Modes and enable Voice over IP. This will create an .entitlements file and appropriate permissions that allow you to use VoIP services. If you don’t enable Voice over IP, CallKit error code 1 will occur.
 
+![enable_voice_over_ip](./Assets/signing-n-capabilities.png)
+
 ## Section2: Design CallKit UI
+
+![callkit-ui](./Assets/callkit-ui.png)
 
 ### Step1
 
@@ -106,6 +121,8 @@ if let iconImage = UIImage(named: "App Icon") {
 Set `.iconTemplateImageData` to the icon image that will be displayed next to the localized name on the CallKit screen. Assign `.pngData()` to your app icon.
 
 ## Section3: Request CallKit action
+
+![request-callkit-action](callkit-action-request.png)
 
 CallKit provides many call-related features such as dialing, ending, muting, holding, etc. Each of these features should be executed by appropriate CallKit actions called `CXCallAction`. These actions are called from a `CXCallController` object, which uses `CXTransaction` objects to execute each `CXCallAction`. In order to control CallKit, you must create corresponding `CXCallActions` and execute them by requesting transaction with `CXTransaction`. 
 
