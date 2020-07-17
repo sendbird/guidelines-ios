@@ -39,7 +39,7 @@ Go to Target > Signing & Capabilities. Add Background Modes and enable Voice ove
 
 ## Section2: Design CallKit UI
 
-![callkit-ui](./Assets/callkit-ui.png)
+<img src="./Assets/callkit-ui.png" width="200">
 
 ### Step1
 
@@ -122,7 +122,7 @@ Set `.iconTemplateImageData` to the icon image that will be displayed next to th
 
 ## Section3: Request CallKit action
 
-<img src="./Assets/callkit-ui.png" width="200">
+![request-callkit-action](./Assets/callkit-action-request.png)
 
 CallKit provides many call-related features such as dialing, ending, muting, holding, etc. Each of these features should be executed by appropriate CallKit actions called `CXCallAction`. These actions are called from a `CXCallController` object, which uses `CXTransaction` objects to execute each `CXCallAction`. In order to control CallKit, you must create corresponding `CXCallActions` and execute them by requesting transaction with `CXTransaction`. 
 
@@ -255,7 +255,7 @@ func removeAllCalls() { ... }
 
 ## Section5: Handling CallKit Events
 
-To report new incoming calls or respond to new CallKit actions, you have to create a `CXProvider` object with `CXProviderConfiguration` that was created at [**Section2**](##Section2). You can also handle `CallKit` events of the call via `CXProviderDelegate`.
+To report new incoming calls or respond to new CallKit actions, you have to create a `CXProvider` object with `CXProviderConfiguration` that was created at [**Section2**](#section2-design-callkit-ui). You can also handle `CallKit` events of the call via `CXProviderDelegate`.
 
 ```swift
 // ProviderDelegate.swift
@@ -315,7 +315,7 @@ extension ProviderDelegate: CXProviderDelegate {
 }
 ```
 1. Import `CallKit` and create a `ProviderDelegate` class with `NSObject` and `CXProviderDelegate` conformance.
-2. Add two properties: `callManager` and `provider`. The `callManager` is the `CallManager` class that you created in [**Section 3**](#Section-3). The `provider` reports actions for CallKit. When you initialize a provider , use `CXProviderConfiguration.custom` that you already created at [**Section 2**](#Section-2).
+2. Add two properties: `callManager` and `provider`. The `callManager` is the `CallManager` class that you created in [**Section 3**](#section3-request-callkit-action). The `provider` reports actions for CallKit. When you initialize a provider , use `CXProviderConfiguration.custom` that you already created at [**Section 2**](#section2-design-callkit-ui).
 
 ```swift
 private let provider: CXProvider
