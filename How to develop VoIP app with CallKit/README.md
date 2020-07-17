@@ -122,7 +122,7 @@ Set `.iconTemplateImageData` to the icon image that will be displayed next to th
 
 ## Section3: Request CallKit action
 
-![request-callkit-action](callkit-action-request.png)
+![request-callkit-action](./Assets/callkit-action-request.png)
 
 CallKit provides many call-related features such as dialing, ending, muting, holding, etc. Each of these features should be executed by appropriate CallKit actions called `CXCallAction`. These actions are called from a `CXCallController` object, which uses `CXTransaction` objects to execute each `CXCallAction`. In order to control CallKit, you must create corresponding `CXCallActions` and execute them by requesting transaction with `CXTransaction`. 
 
