@@ -334,7 +334,8 @@ When the provider performs `CXCallActions`, corresponding `CXProviderDelegate` m
 | func provider(CXProvider, perform: CXAnswerCallAction) | This method called when the user tapped mute button on CallKit UI screen. Invoke accepting action in Sendbird Calls. | `DirectCall.accept(with:)` |
 | func provider(CXProvider, perform: CXEndCallAction) | This method called when the user tapped end button on CallKit UI screen. Invoke ending action in Sendbird Calls. | `DirectCall.end()` |
 | func provider(CXProvider, perform: CXSetMutedCallAction) | This method called when the user tapped mute button on CallKit UI screen. Invoke muting / unmuting action in Sendbird Calls | `DirectCall.muteMicrophone()` and `DirectCall.unmuteMicrophone()` | 
-| func provider(CXProvider, timedOutPerforming: CXAction) | This method called when the provider performs the specified action times out. (Optional) You may invoke ending action. | |
+| func provider(CXProvider, timedOutPerforming: CXAction) | This method called when the provider performs the specified action times out. (Optional) You may invoke ending action. | | 
+
 For more information about `CXProviderDelegate` methods, refer to [Apple Developer Document - CXProviderDelegate](https://developer.apple.com/documentation/callkit/cxproviderdelegate)
 
 ```swift
@@ -402,7 +403,7 @@ extension ProviderDelegate: CXProviderDelegate {
 
 ## Section7: Interaction with UI
 
-Now, we can start and end calls with CallKit using its default view. Next, let’s try to use a custom UI with CallKit and SendBirdCalls(링크 빼먹지말고 Part2로 거러주세요).  For the sake of clarity, I’ll skip creating related storyboard files and `ViewController` files. Just suppose that there is one text field for entering the remote user’s ID, one button for making an outgoing call, another button for receiving an incoming call, and the last button for ending the call.
+Now, we can start and end calls with CallKit using its default view. Next, let’s try to use a custom UI with CallKit.  For the sake of clarity, I’ll skip creating related storyboard files and `ViewController` files. Just suppose that there is one text field for entering the remote user’s ID, one button for making an outgoing call, another button for receiving an incoming call, and the last button for ending the call.
 
 ```swift
 // ViewController.swift
