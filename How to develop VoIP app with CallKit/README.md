@@ -4,8 +4,8 @@
     * [Section2: Design CallKit UI](#section2-design-callkit-ui)
     * [Section3: Request CallKit action](#section3-request-callkit-action)
     * [Section4: Manage Call](#section4-manage-call)
-    * [Section5: Handling CallKit Events](#section5-handling-callkit-event)
-    * [Section6: Handle CXCallAction event](#section6-handle-cxcallacton-event)
+    * [Section5: Handling CallKit Events](#section5-handling-callkit-events)
+    * [Section6: Handle CXCallAction event](#section6-handle-cxcallaction-event)
     * [Section7: Interaction with UI](#section7-interaction-with-ui)
 
 
