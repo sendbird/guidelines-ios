@@ -345,6 +345,9 @@ When the provider performs `CXCallActions`, corresponding `CXProviderDelegate` m
 > **Important**
 > Don’t forget to execute `action.fulfill()` before the method is ended.
 
+> **Important**
+> To access `UUID` of the call, you have to use `action.callUUID` property, not `action.uuid`
+
 | method | Description & What to do in here? | Sendbird Calls method |
 | --- | --- | --- |
 | func provider(CXProvider, perform: CXStartCallAction) | You can get call object from `CXStartCallAction` object. Add its call ID to `callManger.callIDs`. For iPhone local call logs(Recents), you may call `provider.reportOutgoingCall(with:startedConnectingAt:)`. | If you want to handle `DirectCall` object, use `SendBirdCall.getCall(forUUID:)` |
@@ -469,4 +472,3 @@ class ViewController: UIViewController {
 1. Let’s make an outgoing call. Because the user is initiating a call, you have to create a request for the call. This action requires callee’s `user ID` and unique `UUID` of the call.
 2. Let’s implement the action for the end button. This action will end the call based on the `callID`.
 3. Let’s try to answer an incoming audio call. To do this, we have to simulate an incoming audio call. Because CallKit is not aware of the incoming call, you have to report to the CallKit about the incoming call. This action requires the caller's user ID and unique `UUID` of the call. Currently, because the incoming call is made locally, you will use randomly generated `UUID()` instead of a real call’s `UUID`. If you want to test incoming video calls, assign the value of `hasVideo` parameter as `true`.
-
