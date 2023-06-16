@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sendbird-guidelines-ios
+  description: This is a public repository for iOS guidelines
+  annotations:
+    github.com/project-slug: sendbird/guidelines-ios
+spec:
+  type: website
+  lifecycle: experimental
+  owner: dep-client-platform
+  system: sendbird-calls
